@@ -24,7 +24,9 @@
 
 
 ```python
-# TODO
+git clone https://github.com/HCMY/ycimpute.git
+cd ycimpute
+python setup install
 ```
 
 # API
