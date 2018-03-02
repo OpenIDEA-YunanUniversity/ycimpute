@@ -14,9 +14,7 @@
 #pip install ycimpute
 ```
 
-![image.png](attachment:image.png)
-![image.png](attachment:image.png)
-![image.png](attachment:image.png)
+
 
 ### 从源码
 
