@@ -15,7 +15,7 @@
 
 
 ```python
-#pip install ycimpute
+pip install ycimpute
 ```
 
 
@@ -37,8 +37,14 @@ python setup install
 理论请参看这篇论文：
 
 ### 例子
-
-
+#### 在使用例子之前，需要下载数据文件并复制到你的python包的函数目录下（your python path/site-packages/ycimpute/datasets/）
+ Linux用户可以使用wget下载，数据下载在当前工作目录：
+ ```
+ wget https://github.com/HCMY/ycimpute/raw/master/test_data/boston.hdf5
+ wget https://github.com/HCMY/ycimpute/raw/master/test_data/iris.hdf5
+ wget https://github.com/HCMY/ycimpute/raw/master/test_data/wine.hdf5
+ ```
+ 
 ```python
 import numpy as np
 from ycimpute.datasets.load_data import load_boston
