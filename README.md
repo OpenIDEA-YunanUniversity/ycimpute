@@ -34,7 +34,7 @@ python setup install
 ## 选择有监督的填充方法
 
 ### 基于随机森林填充
-理论请参看这篇论文：
+理论请参看这篇论文：[MissForest—non-parametric missing value imputation for mixed-type data](https://academic.oup.com/bioinformatics/article/28/1/112/219101)
 
 ### 例子
 #### 在使用例子之前，需要下载数据文件并复制到你的python包的函数目录下（your python path/site-packages/ycimpute/datasets/）
@@ -77,6 +77,7 @@ print("X filled\n\n",np.argwhere(np.isnan(X_filled)))
 ### 目前模型可用参数 0
 
 ## MICE 填充
+  理论请参看：[Multiple Imputation by Chained Equations](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3074241/)
 
 
 ```python
