@@ -6,9 +6,9 @@
  ### 建议：不同场景下的数据缺失机制不同，这需要工程师基于对业务选择合适的填充方法。
 
 ### 各算法的填充效果
-![葡萄酒数据集](https://github.com/HCMY/ycimpute/tree/master/img/1.png)
-![IRIS数据集](https://github.com/HCMY/ycimpute/tree/master/img/2.png)
-![葡萄酒数据集](https://github.com/HCMY/ycimpute/tree/master/img/3.png)
+![葡萄酒数据集](https://github.com/HCMY/ycimpute/blob/master/img/WINE.svg)
+![IRIS数据集](https://github.com/HCMY/ycimpute/blob/master/img/IRIS.svg)
+![波士顿房产数据集](https://github.com/HCMY/ycimpute/blob/master/img/BOSTON.svg)
 # 下载
 
 ### 通过pip
