@@ -9,7 +9,7 @@
 ![葡萄酒数据集](https://github.com/HCMY/ycimpute/blob/master/img/WINE.svg)
 ![IRIS数据集](https://github.com/HCMY/ycimpute/blob/master/img/IRIS.svg)
 ![波士顿房产数据集](https://github.com/HCMY/ycimpute/blob/master/img/BOSTON.svg)
-# 下载
+# 安装
 
 ### 通过pip
 
