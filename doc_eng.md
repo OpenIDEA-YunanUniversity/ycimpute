@@ -6,7 +6,7 @@ ycimpute is a high-level API for padding missing values library. It is written i
 The original intention of writing this library is that I often encounter some missing values in the process of doing data mining, most of the missing values of the scene can use the same set of missing approach, so the final decision to write a function library to facilitate the call
 Suggestion: Data loss mechanism varies in different scenarios, which requires the engineer to choose the appropriate filling method based on the business.
 
-## performence of vary models
+## performence of various models
 
 ![UCI WINE data set](https://github.com/HCMY/ycimpute/blob/master/img/WINE.svg)
 ![IRIS data set](https://github.com/HCMY/ycimpute/blob/master/img/IRIS.svg)
