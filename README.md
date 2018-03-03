@@ -1,7 +1,10 @@
 
 # ycimpute
 
-![Travis](https://img.shields.io/travis/USER/REPO.svg)![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)
+
+![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)
+![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
 
  #### ycimpute 是一个用于缺失值填充的函数库。它用python写成，里面集成了一些基于机器学习，统计的缺失值填充的方法。部分模块需要[scikit-lean](http://scikit-learn.org/stable/)的支持.
  #### 写这个函数库的初衷是我在做数据挖掘的过程中经常遇到一些缺失值，大部分场景下的缺失值都可以使用同一套缺失处理办法，最后决定写成一个函数库方便调用
