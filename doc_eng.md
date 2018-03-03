@@ -1,5 +1,8 @@
 
 ### Welcome to ycimpute!
+![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)
+![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
 
 ## ycimpute Overview
 ycimpute is a high-level API for padding missing values library. It is written in python, which integrates methods for missing values imputation based on machine learning and statistics. Some modules require scikit-lean support.
