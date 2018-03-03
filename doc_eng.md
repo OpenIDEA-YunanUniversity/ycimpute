@@ -5,9 +5,9 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
 
 ## ycimpute Overview
-ycimpute is a high-level API for padding missing values library. It is written in python, which integrates methods for missing values imputation based on machine learning and statistics. Some modules require scikit-lean support.
-The original intention of writing this library is that I often encounter some missing values in the process of doing data mining, most of the missing values of the scene can use the same set of missing approach, so the final decision to write a function library to facilitate the call
-Suggestion: Data loss mechanism varies in different scenarios, which requires the engineer to choose the appropriate filling method based on the business.
+#### ycimpute is a high-level API for padding missing values library. It is written in python, which integrates methods for missing values imputation based on machine learning and statistics. Some modules require scikit-lean support.
+##### The original intention of writing this library is that I often encounter some missing values in the process of doing data mining, most of the missing values of the scene can use the same set of missing approach, so the final decision to write a function library to facilitate the call
+### Suggestion: Data loss mechanism varies in different scenarios, which requires the engineer to choose the appropriate filling method based on the business.
 
 ## performence of various models
 
