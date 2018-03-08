@@ -16,11 +16,11 @@ The original intention of writing this library is that I often encounter some mi
 
 For various algorithms' detail, Please look up the API below:
 
-1.simple imputation methods(mean value, padding zero, select maxmum, minimum ...etc)
-2.based on Random Forest (IterForest)
-3.Multiple Imputation(MICE)
-4.based on Expectation Maximization (EM)
-5.based on KNN
+- simple imputation methods(mean value, padding zero, select maxmum, minimum ...etc)
+- based on Random Forest (IterForest)
+- Multiple Imputation(MICE)
+- based on Expectation Maximization (EM)
+- based on KNN
 ### Suggestion: Data loss mechanism varies in different scenarios, which requires the engineer to choose the appropriate filling method based on the business.
 ## Missing values can be of three general types:
 
