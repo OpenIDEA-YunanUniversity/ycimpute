@@ -24,15 +24,15 @@ For various algorithms' detail, Please look up the API below:
 ### Suggestion: Data loss mechanism varies in different scenarios, which requires the engineer to choose the appropriate filling method based on the business.
 ## Missing values can be of three general types:
 
-Missing Completely At Random (MCAR):
+>Missing Completely At Random (MCAR):
 When missing data are MCAR, the presence/absence of data is completely independent of observable variables and parameters of interest. In this case, the analysis performed on the data are unbiased. In practice, it is highly unlikely.
-Missing At Random (MAR):
+>Missing At Random (MAR):
 When missing data is not random but can be totally related to a variable where there is complete information. An example is that males are less likely to fill in a depression survey but this has nothing to do with their level of depression, after accounting for maleness. This kind of missing data can induce a bias in your analysis especially if it unbalances your data because of many missing values in a certain category.
-Missing Not At Random (MNAR):
+>Missing Not At Random (MNAR):
 When the missing values are neither MCAR nor MAR. In the previous example that would be the case if people tended not to answer the survey depending on their depression level.
 Let's check out the performance of per imputation methods in various data sets:
 
-the data sets include: IRIS dataset WINE dataset Boston dataset.
+### the data sets include: IRIS dataset WINE dataset Boston dataset.
 
 ## These are the complete data. I used them to experiment and evaluate the model after randomly deleting the data. About 10% of the data is missing, and each feature contains different degrees of data loss.
 
