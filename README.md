@@ -12,17 +12,17 @@ ycimpute is a high-level API for padding missing values library. It is written i
 
 The original intention of writing this library is that I often encounter some missing values in the process of doing data mining, most of the missing values of the scene can use the same set of missing approach, so the final decision to write a function library to facilitate the call
 
-##Up untill now, There are couple of methods I've been implementing:
+## Up untill now, There are couple of methods I've been implementing:
 
 For various algorithms' detail, Please look up the API below:
 
->simple imputation methods(mean value, padding zero, select maxmum, minimum ...etc)
->based on Random Forest (IterForest)
->Multiple Imputation(MICE)
->based on Expectation Maximization (EM)
->based on KNN
-###Suggestion: Data loss mechanism varies in different scenarios, which requires the engineer to choose the appropriate filling method based on the business.
-##Missing values can be of three general types:
+--simple imputation methods(mean value, padding zero, select maxmum, minimum ...etc)
+--based on Random Forest (IterForest)
+--Multiple Imputation(MICE)
+--based on Expectation Maximization (EM)
+--based on KNN
+### Suggestion: Data loss mechanism varies in different scenarios, which requires the engineer to choose the appropriate filling method based on the business.
+## Missing values can be of three general types:
 
 Missing Completely At Random (MCAR):
 When missing data are MCAR, the presence/absence of data is completely independent of observable variables and parameters of interest. In this case, the analysis performed on the data are unbiased. In practice, it is highly unlikely.
@@ -36,9 +36,9 @@ Let's check out the performance of per imputation methods in various data sets:
 
 the data sets include: IRIS dataset WINE dataset Boston dataset.
 
-##These are the complete data. I used them to experiment and evaluate the model after randomly deleting the data. About 10% of the data is missing, and each feature contains different degrees of data loss.
+## These are the complete data. I used them to experiment and evaluate the model after randomly deleting the data. About 10% of the data is missing, and each feature contains different degrees of data loss.
 
-##All of the data are continuous, the evaluation function which I used was RMSE(root mean square error) Red line represents the average of all errors.
+## All of the data are continuous, the evaluation function which I used was RMSE(root mean square error) Red line represents the average of all errors.
 ![葡萄酒数据集](https://github.com/HCMY/ycimpute/blob/master/img/WINE.svg)
 ![IRIS数据集](https://github.com/HCMY/ycimpute/blob/master/img/IRIS.svg)
 ![波士顿房产数据集](https://github.com/HCMY/ycimpute/blob/master/img/BOSTON.svg)
