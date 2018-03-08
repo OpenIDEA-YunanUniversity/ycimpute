@@ -8,7 +8,7 @@
 
 ## [中文文档]( https://hcmy.gitbooks.io/ycimpute/content/)     [English Documentation](https://github.com/HCMY/ycimpute/blob/master/doc_eng.md)
 # What is ycimpute?
-ycimpute is a high-level API for padding missing values library. It is written in python, which integrates methods for missing values imputation based on machine learning and statistics. Some modules require scikit-lean support.
+ycimpute is a high-level API for padding missing values library. It is written in python, which integrates methods for missing values imputation based on machine learning and statistics. Some modules require [scikit-lean](http://scikit-learn.org/stable/) support.
 
 The original intention of writing this library is that I often encounter some missing values in the process of doing data mining, most of the missing values of the scene can use the same set of missing approach, so the final decision to write a function library to facilitate the call
 
@@ -32,7 +32,7 @@ For various algorithms' detail, Please look up the API below:
    When the missing values are neither MCAR nor MAR. In the previous example that would be the case if people tended not to answer the survey depending on their depression level.
 Let's check out the performance of per imputation methods in various data sets:
 
-### the data sets include: IRIS dataset WINE dataset Boston dataset.
+### the data sets include: [IRIS dataset]() [WINE dataset]() [Boston dataset]().
 
 ## These are the complete data. I used them to experiment and evaluate the model after randomly deleting the data. About 10% of the data is missing, and each feature contains different degrees of data loss.
 
