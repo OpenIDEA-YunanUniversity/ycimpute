@@ -55,7 +55,7 @@ class DecisionTree(metaclass=ABCMeta):
     def _entropy(self):
         """
         up until now, cart tree do not necessary need entropy except ID3 or C4.5
-        :return:
+        :return: None
         """
         pass
 
