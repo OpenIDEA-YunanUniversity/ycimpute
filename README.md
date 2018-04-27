@@ -6,7 +6,7 @@
 ![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
 
-## [中文文档]( https://hcmy.gitbooks.io/ycimpute/content/)     [English Documentation](https://hcmy.gitbooks.io/ycimpute-api/content/)
+## [中文文档]( https://hcmy.gitbooks.io/ycimpute/content/)     [Documentation](https://hcmy.gitbooks.io/ycimpute-api/content/)
 # What is ycimpute?
 ycimpute is a high-level API for padding missing values library. It is written in python, which integrates methods for missing values imputation based on machine learning and statistics. Some modules require [scikit-lean](http://scikit-learn.org/stable/) support.
 
