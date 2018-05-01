@@ -5,6 +5,9 @@ import numpy as np
 import copy
 
 class EM(Solver):
+    """
+    this algorithm just require to lean the Gauss distribution elements 'mu' and 'sigma'
+    """
     def __init__(self, max_iter=100, theta=1e-5):
         self.max_iter = max_iter
         self.theta = theta
