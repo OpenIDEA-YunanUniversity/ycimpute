@@ -12,7 +12,7 @@ ycimpute is a high-level API for padding missing values library. It is written i
 
 The original intention of writing this library is that I often encounter some missing values in the process of doing data mining, most of the missing values of the scene can use the same set of missing approach, so the final decision to write a function library to facilitate the call
 
-## Up untill now, There are couple of methods I've been implemented:
+## Up untill now, There are a couple of methods I've been implemented:
 
 For various algorithms' detail, Please look up the API below:
 
