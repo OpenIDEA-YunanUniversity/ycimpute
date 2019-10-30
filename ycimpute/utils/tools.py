@@ -3,6 +3,7 @@
 
 
 import numpy as np
+import pandas as pd
 
 from ..utils import config
 
@@ -54,10 +55,11 @@ class Solver(object):
         coltype_dic = {}
         for col in range(X.shape[1]):
             col_val = X[:, col]
-            nan_index = np.where(np.isnan(col_val))
+            nan_index = np.where(pd.isnull(col_val))
             col_val = np.delete(col_val, nan_index)
             #len(np.unique(col_val)) <= 2 or
-            if (col_val.dtype.kind !='f') and (np.any(col_val == col_val.astype(int))):
+
+            if len(np.unique(col_val)) / len(col_val) < 0.05 and (np.any(col_val == col_val.astype(int))):
                 coltype_dic[col] = config.categotical
             else:
                 coltype_dic[col] = config.continuous
@@ -213,19 +215,6 @@ class Solver(object):
 
         return train_X, train_y, test_X
 
-    def clip(self, X, col_type_dict):
-        """
-        Clip values to fall within any global or column-wise min/max constraints
-        """
-
-
-        for col in range(X.shape[1]):
-            col_type = col_type_dict[col]
-            if col_type is config.categotical:
-                X[:,col][X[:, col]>0.5] = 1
-                X[:, col][X[:, col] < 0.5 ] = 0
-        return X
-
 
     def solve(self, X):
         """
@@ -243,10 +232,8 @@ class Solver(object):
         Returns completed matrix without any NaNs.
         """
         self._check_input(X)
-        self._check_missing_value_mask(np.isnan(X))
-        col_type_dict = self._judge_type(X)
-        X = self.solve(X)
-        return self.clip(X, col_type_dict)
+        self._check_missing_value_mask(pd.isnull(X))
+        return self.solve(X)
 
     @staticmethod
     def _get_missing_loc(missing_mask):

@@ -112,12 +112,12 @@ class IterImput(Solver):
             continuous_div = 0
             continuous_sum = 0.001
 
-        if categorical_var_len is 0:
+        if categorical_var_len == 0:
             categorical_differ = 0
         else:
             categorical_differ = categorical_count / categorical_var_len
 
-        if continuous_sum is 0:
+        if continuous_sum == 0:
             continuous_differ = 0
         else:
             continuous_differ = continuous_div / continuous_sum
