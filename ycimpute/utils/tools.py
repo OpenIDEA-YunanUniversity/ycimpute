@@ -123,7 +123,7 @@ class Solver(object):
         return mask_rember
 
     @staticmethod
-    def _fill_columns_with_fn(X, missing_mask, method):
+    def _fill_column_with_fn(X, missing_mask, method):
         """
 
         :param X: numpy array, the data which waiting to be imputation
@@ -131,16 +131,20 @@ class Solver(object):
         :param method: the way of what kind of normal imputation algorithm you use
         :return:
         """
-        for col_idx in range(X.shape[1]):
-            missing_col = missing_mask[:, col_idx]
-            n_missing = missing_col.sum()  # np.sum() which could calculate the number of 'TRUE'
-            if n_missing == 0:
-                continue
-            col_data = X[:, col_idx]
-            fill_values = method(col_data)
-            X[missing_col, col_idx] = fill_values
+        n_missing = missing_mask.sum()  # np.sum() which could calculate the number of 'TRUE'
+        if n_missing == 0:
+            return X
 
-    def fill(self, X, missing_mask, fill_method=None, inplace=False):
+        if method == 'frequency':
+            unique, counts = np.array(np.unique(X[~np.isnan(X)], return_counts=True))
+            fill_values = np.random.choice(unique, size=np.count_nonzero(np.isnan(X)), p=counts / np.sum(counts))
+        else:
+            fill_values = method(X)
+        X[missing_mask] = fill_values
+
+        return X
+
+    def fill(self, X, missing_mask, fill_method=None):
         """
         Parameters
         ----------
@@ -163,23 +167,22 @@ class Solver(object):
         inplace : bool
             Modify matrix or fill a copy
         """
-        if not inplace:
-            X = X.copy()
-
         if not fill_method:
             fill_method = self.fill_method
 
-        if fill_method not in ("zero", "mean", "median", "min", "random"):
-            raise ValueError("Invalid fill method: '%s'" % (fill_method))
+        if fill_method not in ("zero", "mean", "median", "min", "random", "frequency"):
+             raise ValueError("Invalid fill method: '%s'" % (fill_method))
         elif fill_method == "zero":
             # replace NaN's with 0
             X[missing_mask] = 0  # this is the match data feature of numpy array
         elif fill_method == "mean":
-            self._fill_columns_with_fn(X, missing_mask, np.nanmean)
+            self._fill_column_with_fn(X, missing_mask, np.nanmean)
         elif fill_method == "median":
-            self._fill_columns_with_fn(X, missing_mask, np.nanmedian)
+            self._fill_column_with_fn(X, missing_mask, np.nanmedian)
         elif fill_method == "min":
-            self._fill_columns_with_fn(X, missing_mask, np.nanmin)
+            self._fill_column_with_fn(X, missing_mask, np.nanmin)
+        elif fill_method == "frequency":
+            self._fill_column_with_fn(X, missing_mask, "frequency")
         # elif fill_method == "random":
         #    self._fill_columns_with_fn(
         #        X,

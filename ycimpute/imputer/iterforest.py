@@ -39,7 +39,13 @@ class IterImput(Solver):
         self.imp_continuous_index, self.imp_categorical_index = \
             self.get_type_index(self.mask_memo_dict[config.all], self.coltype_dict)
 
-        init_fill = self.fill(X, self.mask_memo_dict[config.all], fill_method='mean')
+        init_fill = X.copy()
+
+        for col_idx in range(X.shape[1]):
+            if self.coltype_dict[col_idx] == config.categotical:
+                init_fill[:, col_idx] = self.fill(init_fill[:, col_idx], self.mask_memo_dict[col_idx], fill_method='frequency')
+            else:
+                init_fill[:, col_idx] = self.fill(init_fill[:, col_idx], self.mask_memo_dict[col_idx], fill_method='mean')
 
         differ_categorical = float('inf')
         differ_continuous = float('inf')
