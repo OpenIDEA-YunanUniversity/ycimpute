@@ -3,7 +3,7 @@
 
 
 import numpy as np
-import pandas as pd
+from pandas import isnull
 
 from ..utils import config
 
@@ -55,7 +55,7 @@ class Solver(object):
         coltype_dic = {}
         for col in range(X.shape[1]):
             col_val = X[:, col]
-            nan_index = np.where(pd.isnull(col_val))
+            nan_index = np.where(isnull(col_val))
             col_val = np.delete(col_val, nan_index)
             #len(np.unique(col_val)) <= 2 or
 
@@ -235,7 +235,7 @@ class Solver(object):
         Returns completed matrix without any NaNs.
         """
         self._check_input(X)
-        self._check_missing_value_mask(pd.isnull(X))
+        self._check_missing_value_mask(isnull(X))
         return self.solve(X)
 
     @staticmethod
