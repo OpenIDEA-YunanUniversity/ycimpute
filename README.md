@@ -37,7 +37,7 @@ Let's check out the performance of per imputation methods in various data sets:
 
 ## These are the complete data. I used them to experiment and evaluate the model after randomly deleting the data. About 10% of the data is missing, and each feature contains different degrees of data loss.
 
-## All of the data are continuous, the evaluation function which I used was RMSE(root mean square error) Red line represents the average of all errors.
+## All of the data are continuous, the evaluation function which I used was RMSE(root mean square error) Red line represents the average of all errors.(Note: All data has not been normalized so RMSE looks higher)
 ![葡萄酒数据集](https://github.com/HCMY/ycimpute/blob/master/img/WINE.svg)
 ![IRIS数据集](https://github.com/HCMY/ycimpute/blob/master/img/IRIS.svg)
 ![波士顿房产数据集](https://github.com/HCMY/ycimpute/blob/master/img/BOSTON.svg)
