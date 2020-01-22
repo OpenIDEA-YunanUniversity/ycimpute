@@ -21,6 +21,7 @@ For various algorithms' detail, Please look up the API below:
 - Multiple Imputation(MICE)
 - based on Expectation Maximization (EM)
 - based on KNN
+- based AutoEncoder MIDA[MIDA: Multiple Imputation using Denoising Autoencoders](https://arxiv.org/abs/1705.02737)
 ### Suggestion: Data loss mechanism varies in different scenarios, which requires the engineer to choose the appropriate filling method based on the business.
 ## Missing values can be of three general types:
 
