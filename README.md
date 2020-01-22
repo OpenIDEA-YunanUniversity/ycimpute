@@ -1,6 +1,7 @@
 
 # ycimpute
 
+# Updated
 
 ![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)
 ![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)
@@ -17,7 +18,7 @@ The original intention of writing this library is that I often encounter some mi
 For various algorithms' detail, Please look up the API below:
 
 - simple imputation methods(mean value, padding zero, select maxmum, minimum ...etc)
-- based on Random Forest (IterForest)
+- based on Random Forest (missforest)
 - Multiple Imputation(MICE)
 - based on Expectation Maximization (EM)
 - based on KNN
