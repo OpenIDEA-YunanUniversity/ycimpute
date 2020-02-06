@@ -55,7 +55,7 @@ class Solver(object):
             col_val = np.delete(col_val, nan_index)
 
             if len(np.unique(col_val)) / len(col_val) < 0.05 and (np.any(col_val == col_val.astype(int))):
-                coltype_dic[col] = 'categotical'
+                coltype_dic[col] = 'categorical'
             else:
                 coltype_dic[col] = 'continuous'
         return coltype_dic
