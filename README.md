@@ -2,6 +2,8 @@
 # ycimpute
 
 # Updated
+- pypi updated
+- added GAN based algorithm
 
 ![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)
 ![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)
@@ -23,6 +25,8 @@ For various algorithms' detail, Please look up the API below:
 - based on Expectation Maximization (EM)
 - based on KNN
 - based AutoEncoder MIDA[MIDA: Multiple Imputation using Denoising Autoencoders](https://arxiv.org/abs/1705.02737)
+- based GAIN[GAIN: Missing Data Imputation using Generative Adversarial Nets](https://arxiv.org/abs/1806.02920)
+
 ### Suggestion: Data loss mechanism varies in different scenarios, which requires the engineer to choose the appropriate filling method based on the business.
 ## Missing values can be of three general types:
 
