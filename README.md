@@ -38,7 +38,7 @@ For various algorithms' detail, Please look up the API below:
    When the missing values are neither MCAR nor MAR. In the previous example that would be the case if people tended not to answer the survey depending on their depression level.
 Let's check out the performance of per imputation methods in various data sets:
 
-### the data sets include: [IRIS dataset]() [WINE dataset]() [Boston dataset]().
+### the data sets include: [IRIS dataset](https://github.com/OpenIDEA-YunanUniversity/ycimpute/tree/master/ycimpute/datasets) [WINE dataset](https://github.com/OpenIDEA-YunanUniversity/ycimpute/tree/master/ycimpute/datasets) [Boston dataset](https://github.com/OpenIDEA-YunanUniversity/ycimpute/tree/master/ycimpute/datasets).
 
 ## These are the complete data. I used them to experiment and evaluate the model after randomly deleting the data. About 10% of the data is missing, and each feature contains different degrees of data loss.
 
