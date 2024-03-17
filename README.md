@@ -1,6 +1,8 @@
 
 # ycimpute
 
+【Notice！】 I've been so busy at work since i was graduated from colleage, so this project will not be maintain anymore. I apologize for any inconvenience caused and thank you for your support. 
+
 # Updated
 - pypi updated
 - added GAN based algorithm
